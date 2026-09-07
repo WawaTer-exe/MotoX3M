@@ -1,40 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Unblocked Games Hub</title>
 
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html,
     body {
       margin: 0;
-      min-height: 100%;
       font-family: Arial, sans-serif;
-      color: white;
       background: #0f0f14;
+      color: white;
     }
 
-    /* GIF background layer */
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      background: url("https://mir-s3-cdn-cf.behance.net/project_modules/source/8f444a91900373.5e3d63788609e.gif") center / cover no-repeat;
-      pointer-events: none;
+    header {
+      background: #1a1a22;
+      padding: 15px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 2px solid #2a2a35;
     }
 
-    /* Makes the game cards easier to read while keeping the GIF visible behind them */
-    body::after {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: 1;
+    #games {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .game {
+      background: #1a1a22;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      transition: 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .game:hover {
+      transform: scale(1.05);
+      background: #252533;
+    }
+
+    .game img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .game h3 {
+      margin: 10px 0 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #aaa;
+    }
+    <img src="https://media.giphy.com/media/l0HlQ7LRalQqdWfao/giphy.gif"
+     style="width:100vw;height:100vh;object-fit:cover;">
+  </style>
+</head>
+
+<body>
+
+  <header>
+    🎮 Unblocked Games Hub
+  </header>
+
+  <div id="games">
+
+   <!-- MotoX3M Winter -->
+    <a href="MotoX3MWinter.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzVRj1EUG4pf54UEDkQWUDwNKeqcyCkgyW6jA9prHwOQ&s=10/300x180?text=MotoX3M Winter" alt="MotoX3m Winter">
+      <h3>MotoX3M Winter</h3>
+    </a>
+
+    <div id="games">
+    <!-- MotoX3M PoolParty -->
+    <a href="MotoX3M5PoolParty.html" class="game">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAXAiWF7-P9wAYXnmZXIXGEMK-gYcmjXcurnBGOdr9sA&s=10/300x180?text=MotoX3M PoolParty" alt="MotoX3m PoolParty">
+      <h3>MotoX3M PoolParty</h3>
+    </a>
+  </div>
+
+  <footer>
+    Made for gaming 😎
+  </footer>
+
+  <script>
+    function openGame(page) {
+      window.location.href = "player.html?game=" + page;
+    }
+  </script>
+
+</body>
+
+</html>
+         z-index: 1;
       background: rgba(15, 15, 20, 0.58);
       pointer-events: none;
     }
