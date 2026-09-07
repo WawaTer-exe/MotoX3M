@@ -9,12 +9,15 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: #0f0f14;
       color: white;
+
+      /* ✅ BACKGROUND FIX */
+      background: url("https://cdn.dribbble.com/userupload/28405279/file/original-d63788fd2151ab2eb2e78d6c12b7f1dd.gif") no-repeat center center fixed;
+      background-size: cover;
     }
 
     header {
-      background: #1a1a22;
+      background: rgba(26, 26, 34, 0.85);
       padding: 15px;
       text-align: center;
       font-size: 24px;
@@ -30,11 +33,70 @@
     }
 
     .game {
-      background: #1a1a22;
+      background: rgba(26, 26, 34, 0.9);
       border-radius: 10px;
       padding: 10px;
       text-align: center;
       transition: 0.2s;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+
+    .game:hover {
+      transform: scale(1.05);
+      background: #252533;
+    }
+
+    .game img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .game h3 {
+      margin: 10px 0 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      font-size: 12px;
+      color: #aaa;
+      background: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    🎮 Unblocked Games Hub
+  </header>
+
+  <div id="games">
+
+    <!-- MotoX3M Winter -->
+    <a href="MotoX3MWinter.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=MotoX3M+Winter" alt="MotoX3M Winter">
+      <h3>MotoX3M Winter</h3>
+    </a>
+
+    <!-- MotoX3M PoolParty -->
+    <a href="MotoX3M5PoolParty.html" class="game">
+      <img src="https://via.placeholder.com/300x180?text=MotoX3M+PoolParty" alt="MotoX3M PoolParty">
+      <h3>MotoX3M PoolParty</h3>
+    </a>
+
+  </div>
+
+  <footer>
+    Made for gaming 😎
+  </footer>
+
+</body>
+
+</html>      transition: 0.2s;
       cursor: pointer;
       text-decoration: none;
       color: white;
